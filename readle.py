@@ -18,7 +18,6 @@ def scrape_manual(url):
 
     soup = BeautifulSoup(res.text, "html.parser")
 
-    # Coba cari <article> atau <main>
     article = soup.find("article")
     if not article:
         article = soup.find("main")
